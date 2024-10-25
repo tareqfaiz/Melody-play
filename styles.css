@@ -1,0 +1,104 @@
+body {
+  text-align: center;
+  background-color: #7f8147;
+ 
+}
+
+h1 {
+  font-size: 5rem;
+  color: #DBEDF3;
+  font-family: "Arvo", cursive;
+  text-shadow: 3px 0 #1f18e2;
+
+}
+
+footer {
+  color: #DBEDF3;
+  font-family: sans-serif;
+  padding-top: 50px;
+}
+
+.t {
+background-image: url("images/tom1.png");
+}
+
+.a {
+background-image: url("images/tom2.png");
+}
+
+.r {
+background-image: url("images/tom3.png");
+}
+
+.e {
+background-image: url("images/tom4.png");
+}
+
+.q {
+background-image: url("images/snare.png");
+}
+
+.f {
+background-image: url("images/crash.png");
+}
+
+.i {
+background-image: url("images/kick.png");
+}
+
+.set {
+  margin: 10% auto;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+.red {
+  color: red;
+}
+
+.drum {
+  outline: none;
+  border: 10px solid #404B69;
+  font-size: 5rem;
+  font-family: 'Arvo', cursive;
+  line-height: 2;
+  font-weight: 900;
+  color: #a1da04;
+  text-shadow: 5px 0 #6e15cc;
+  border-radius: 70px;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 10px;
+  background-color: rgb(52, 214, 225);
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 300px) {
+  h1 {
+      font-size: 2.5rem; /* Smaller title */
+  }
+
+  .set {
+      height: 100vh; /* Adjust to use full viewport height */
+      flex-direction: row; /* Arrange buttons in a row */
+      justify-content: space-evenly; /* Distribute space evenly between buttons */
+  }
+
+  .drum {
+      width: 50px; /* Smaller width for small screens */
+      height: 50px; /* Same height for round shape */
+      font-size: 1rem; /* Smaller text size for buttons */
+      margin: 5px; /* Adjust margin to fit more buttons */
+  }
+}
