@@ -86,19 +86,25 @@ background-image: url("images/kick.png");
 /* Media Queries for Responsive Design */
 @media (max-width: 300px) {
   h1 {
-      font-size: 2.5rem; /* Smaller title */
-  }
+    font-size: 2.5rem; /* Smaller title */
+}
 
-  .set {
-      height: 100vh; /* Adjust to use full viewport height */
-      flex-direction: row; /* Arrange buttons in a row */
-      justify-content: space-evenly; /* Distribute space evenly between buttons */
-  }
+.set {
+    height: auto; /* Allow auto height to avoid extra space */
+    justify-content: center; /* Center buttons */
+}
 
-  .drum {
-      width: 50px; /* Smaller width for small screens */
-      height: 50px; /* Same height for round shape */
-      font-size: 1rem; /* Smaller text size for buttons */
-      margin: 5px; /* Adjust margin to fit more buttons */
-  }
+.drum {
+    width: 50px; /* Smaller width for small screens */
+    height: 50px; /* Same height for round shape */
+    font-size: 1rem; /* Smaller text size for buttons */
+    margin: 5px; /* Adjust margin to fit more buttons */
+}
+
+/* Adjust the layout for up to 4 buttons in a row on small screens */
+.set {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));  /* Create a responsive grid */
+    gap: 5px; /* Space between buttons */
+}
 }
