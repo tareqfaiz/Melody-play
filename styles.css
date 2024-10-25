@@ -84,7 +84,7 @@ background-image: url("images/kick.png");
 
 
 /* Media Queries for Responsive Design */
-@media (max-width: 300px) {
+@media (max-width: 500px) {
   h1 {
     font-size: 2.5rem; /* Smaller title */
 }
