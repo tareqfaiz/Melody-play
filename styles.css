@@ -95,16 +95,16 @@ background-image: url("images/kick.png");
 }
 
 .drum {
-    width: 50px; /* Smaller width for small screens */
-    height: 50px; /* Same height for round shape */
-    font-size: 1rem; /* Smaller text size for buttons */
+    width: 80px; /* Smaller width for small screens */
+    height: 80px; /* Same height for round shape */
+    font-size: 1.5rem; /* Smaller text size for buttons */
     margin: 5px; /* Adjust margin to fit more buttons */
 }
 
 /* Adjust the layout for up to 4 buttons in a row on small screens */
 .set {
     display: grid; /* Use grid layout */
-    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));  /* Create a responsive grid */
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));  /* Create a responsive grid */
     gap: 5px; /* Space between buttons */
 }
 }
