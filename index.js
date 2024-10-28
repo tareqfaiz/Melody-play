@@ -86,8 +86,13 @@ function makeSound(key){
 
 //JQUERY
 $("button").click(function(){
+  $("h1").animate({
+    height: 'toggle'
+  });
+});
+
+$("button").click(function(){
    $("h1").css("color", "yellow");
-   $("h1").text(event.key).Toggle();
 
 // Get the current screen width
 var screenWidth = $(window).width();
@@ -101,7 +106,7 @@ if (screenWidth < 500) {
 });
 
 $(document).keypress(function(event){
-   $("h1").text(event.key).slideToggle();
+   $("h1").css("font-size", "4rem");
 });
 
 $("h1").on("mouseover", function() {
