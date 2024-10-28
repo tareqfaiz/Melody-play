@@ -23,13 +23,9 @@ for (var i=0; i<numberOfDrums; i++)
 //DETECTING KEYBOARD PRESS
 
 document.addEventListener ("keypress", function(event){
-
    makeSound(event.key);
-
    buttonAnimation(event.key);
-
-}
-);
+});
 
 
 function makeSound(key){
@@ -79,26 +75,17 @@ function makeSound(key){
 
 function buttonAnimation(currentKey){
    var activeButton = document.querySelector("." + currentKey);
-
-   activeButton.classList.add("pressed");
-
-   setTimeout(function() {
+   if (activeButton) {
+      activeButton.classList.add("pressed");
+      setTimeout(function() {
       activeButton.classList.remove("pressed");
-   }, 100);
-
+      }, 100);
+   }
 }
 
 
 //JQUERY
 $("button").click(function(){
-   $("h1").css("color", "purple");
-});
-
-$(document).keypress(function(event){
-   $("h1").text(event.key).slideToggle();
-});
-
-$("h1").on("mouseover", function() {
    $("h1").css("color", "yellow");
 
 // Get the current screen width
@@ -106,8 +93,16 @@ var screenWidth = $(window).width();
 
 // Set font size based on screen width
 if (screenWidth < 500) {
-    $("h1").css("font-size", "4rem"); // Smaller font size for small screens
+ $("h1").css("font-size", "4rem"); // Smaller font size for small screens
 } else {
-    $("h1").css("font-size", "8rem"); // Larger font size for larger screens
+ $("h1").css("font-size", "8rem"); // Larger font size for larger screens
 }
+});
+
+$(document).keypress(function(event){
+   $("h1").text(event.key).slideToggle();
+});
+
+$("h1").on("mouseover", function() {
+   $("h1").css("color", "purple");
 });
