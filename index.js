@@ -90,30 +90,24 @@ function buttonAnimation(currentKey){
 
 
 //JQUERY
-
 $("button").click(function(){
    $("h1").css("color", "purple");
-});
-
-$("button").on("click", function() {
-   $("h1").fadeToggle();  
 });
 
 $(document).keypress(function(event){
    $("h1").text(event.key).slideToggle();
 });
 
-
 $("h1").on("mouseover", function() {
    $("h1").css("color", "yellow");
 
-   // Get the current screen width
-   var screenWidth = $(window).width();
+// Get the current screen width
+var screenWidth = $(window).width();
 
-   // Set font size based on screen width
-   if (screenWidth < 500) {
-       $("h1").css("font-size", "4rem"); // Smaller font size for small screens
-   } else {
-       $("h1").css("font-size", "8rem"); // Larger font size for larger screens
-   }
+// Set font size based on screen width
+if (screenWidth < 500) {
+    $("h1").css("font-size", "4rem"); // Smaller font size for small screens
+} else {
+    $("h1").css("font-size", "8rem"); // Larger font size for larger screens
+}
 });
