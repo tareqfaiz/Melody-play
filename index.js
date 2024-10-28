@@ -73,7 +73,7 @@ function makeSound(key){
 }
 
 
-function buttonAnimation(currentKey){
+/*function buttonAnimation(currentKey){
    var activeButton = document.querySelector("." + currentKey);
    if (activeButton) {
       activeButton.classList.add("pressed");
@@ -81,12 +81,13 @@ function buttonAnimation(currentKey){
       activeButton.classList.remove("pressed");
       }, 100);
    }
-}
+}*/
 
 
 //JQUERY
 $("button").click(function(){
    $("h1").css("color", "yellow");
+   $("h1").text(event.key).Toggle();
 
 // Get the current screen width
 var screenWidth = $(window).width();
